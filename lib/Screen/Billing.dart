@@ -20,7 +20,10 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
         ),
-        body: ConfirmationScreen(),
+        body: Container(
+          color: Colors.white, // Set background color to white
+          child: ConfirmationScreen(),
+        ),
       ),
     );
   }

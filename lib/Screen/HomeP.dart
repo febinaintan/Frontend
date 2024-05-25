@@ -23,11 +23,16 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 8),
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundImage: AssetImage(
-                        'assets/images/profile.jpg'), // Path to profile image
-                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed("/Profile");
+                    },
+                    child: CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage('assets/images/profile.jpg'), // Path to profile image
+                    ),
+                  )
+
                 ],
               ),
             ),

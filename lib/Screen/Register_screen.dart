@@ -46,16 +46,30 @@ class RegisterScreen extends StatelessWidget {
               ),
               obscureText: true,
             ),
-            SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {
-                // Add your onPressed code here!
-              },
-              child: Text('Create Account'),
-              style: ElevatedButton.styleFrom(
-                minimumSize: Size(double.infinity, 50), // double.infinity is the width
+          SizedBox(height: 30),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed("/CreateAccount");
+            },
+            child: Container(
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.blue,
+              ),
+              child: Center(
+                child: Text(
+                  'Create Account',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
+          ),
           ],
         ),
       ),

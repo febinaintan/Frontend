@@ -9,6 +9,8 @@ import 'package:nama_proyek/Screen/Cat_Stationery.dart' as Stationery;
 import 'package:nama_proyek/Screen/Cat_Furniture.dart' as Furniture;
 import 'package:nama_proyek/Screen/Cat_Tools.dart' as Tools;
 import 'package:nama_proyek/Screen/Cat_Tools.dart' as Attribute;
+import 'package:nama_proyek/Screen/Profile.dart' as Profile;
+import 'package:nama_proyek/Screen/login_screen.dart' as login;
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +42,9 @@ class MyApp extends StatelessWidget {
         "/Cat_Furniture": (context) => Furniture.CategoriesScreen(),
         "/Cat_Tools": (context) => Tools.CategoriesScreen(),
         "/Cat_Attribute": (context) => Attribute.CategoriesScreen(),
+        "/Profile" : (context) => Profile.ProfilePage(),
+        "/login"  : (context) => login.LoginScreen(),
+        "/CreateAccount" : (context) => login.LoginScreen(),
       },
     );
   }

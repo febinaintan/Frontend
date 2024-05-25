@@ -86,7 +86,7 @@ class _BillingInformationState extends State<BillingInformationScreen> {
                   _selectedPaymentMethod = newValue;
                 });
               },
-              items: <String>['Credit Card', 'PayPal', 'Bank Transfer']
+              items: <String>['Cash On Delivery']
                   .map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
@@ -94,16 +94,25 @@ class _BillingInformationState extends State<BillingInformationScreen> {
                 );
               }).toList(),
             ),
-            SizedBox(height: 40),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  // Add order processing logic here
-                },
-                child: Text('Lakukan Pesanan'),
-                style: styleFrom2,
+          SizedBox(height: 40),
+          Center(
+            child: InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed("/Billing");
+              },
+              child: Container(
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  'Lakukan Pesanan',
+                  style: TextStyle(color: Colors.white),
+                ),
               ),
             ),
+          ),
           ],
         ),
       ),

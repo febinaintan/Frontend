@@ -17,9 +17,9 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var styleFrom = ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              minimumSize: Size(200, 50), // Width and height of the button
-            );
+      backgroundColor: Colors.red,
+      minimumSize: Size(200, 50), // Width and height of the button
+    );
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -44,7 +44,7 @@ class ProfilePage extends StatelessWidget {
           SizedBox(height: 40),
           CircleAvatar(
             radius: 60,
-            backgroundImage: AssetImage('assets/images/Logo_2.png'), // Replace with actual user profile image asset path
+            backgroundImage: AssetImage('assets/images/profile.jpeg'), // Replace with actual user profile image asset path
           ),
           SizedBox(height: 20),
           Text(
@@ -57,7 +57,7 @@ class ProfilePage extends StatelessWidget {
           SizedBox(height: 40),
           ElevatedButton(
             onPressed: () {
-              // Add logout functionality
+              Navigator.of(context).pushNamed("/login");// Add logout functionality
             },
             style: styleFrom,
             child: Text('Logout'),
