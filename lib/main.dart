@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Pasar Kuliah (PasKu)',
       theme: ThemeData(
-        primaryColor: const Color(0xFF673AB7),
+        primaryColor: const Color(0xFF673AB7), //color
         colorScheme: ColorScheme.light(
           primary: const Color(0xFF673AB7),
         ),
@@ -42,9 +42,9 @@ class MyApp extends StatelessWidget {
         "/Cat_Furniture": (context) => Furniture.CategoriesScreen(),
         "/Cat_Tools": (context) => Tools.CategoriesScreen(),
         "/Cat_Attribute": (context) => Attribute.CategoriesScreen(),
-        "/Profile" : (context) => Profile.ProfilePage(),
-        "/login"  : (context) => login.LoginScreen(),
-        "/CreateAccount" : (context) => login.LoginScreen(),
+        "/Profile": (context) => Profile.ProfilePage(),
+        "/login": (context) => login.LoginScreen(),
+        "/CreateAccount": (context) => login.LoginScreen(),
       },
     );
   }
